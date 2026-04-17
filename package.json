@@ -1,0 +1,17 @@
+{
+  "name": "business-websites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--max-http-header-size=65536 vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@arrow-js/core": "^1.0.0-alpha.11"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}
