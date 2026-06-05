@@ -109,6 +109,44 @@ a:hover { color: var(--blue-bright); }
     box-shadow: var(--glow-blue);
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+/* ─── LANGUAGE PICKER ─── */
+.lang-picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid var(--border-bright);
+    background: rgba(13, 17, 23, 0.6);
+    clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+
+.lang-opt {
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+}
+
+.lang-opt:hover { color: var(--white); }
+
+.lang-opt.active {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.lang-sep {
+    color: var(--border-bright);
+    user-select: none;
+}
+
 /* ─── BUTTONS ─── */
 .btn {
     display: inline-flex;
