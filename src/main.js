@@ -38,13 +38,17 @@ const toggleFaq = (i) => {
     state.faqOpen = state.faqOpen === i ? null : i;
 };
 
-const langPicker = () => html`
-    <div class="lang-picker" role="group" aria-label="${t.langToggle.aria}">
-        <a class="lang-opt ${lang === 'ko' ? 'active' : ''}" href="${langPath('ko')}" aria-current="${lang === 'ko' ? 'true' : 'false'}">${t.langToggle.ko}</a>
+const langPicker = () => {
+    const koClass = lang === 'ko' ? 'lang-opt active' : 'lang-opt';
+    const enClass = lang === 'en' ? 'lang-opt active' : 'lang-opt';
+    return html`
+    <div class="lang-picker" aria-label="${t.langToggle.aria}">
+        <a class="${koClass}" href="${langPath('ko')}">${t.langToggle.ko}</a>
         <span class="lang-sep">/</span>
-        <a class="lang-opt ${lang === 'en' ? 'active' : ''}" href="${langPath('en')}" aria-current="${lang === 'en' ? 'true' : 'false'}">${t.langToggle.en}</a>
+        <a class="${enClass}" href="${langPath('en')}">${t.langToggle.en}</a>
     </div>
 `;
+};
 
 const nav = () => html`
     <nav class="nav">
